@@ -27,8 +27,7 @@ namespace DurableFunctionsDemo
         [Function(nameof(A_CheckOrder))]
         public static async Task<string> A_CheckOrder([ActivityTrigger] Order OrderData)
         {
-            string orderprocessed = "Order" + OrderData.OrderId + "order date checked at " + DateTime.Now.ToString();
-            return "order processed";
+            return "Order" + OrderData.OrderId + "order date checked at " + DateTime.Now.ToString(); ;
         }
 
         [Function("Function1_HttpStart")]
